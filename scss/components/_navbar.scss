@@ -1,0 +1,129 @@
+.navbar {
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+
+  background-color: rgba($color: #171718, $alpha: 0.8);
+  backdrop-filter: blur(5px);
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-size: clamp(16px, 3vw, 28px);
+    font-weight: 600;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    transition: 0.3s ease;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: clamp(10px, 2vw, 16px);
+
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 110%;
+      left: 0;
+
+      width: 0;
+      height: 2px;
+
+      background-color: #5c62ec;
+      border-radius: 6px;
+
+      transition: 0.3s ease;
+    }
+
+    &--active::before {
+      width: 100%;
+      background-color: #fff;
+    }
+
+    &:hover::before {
+      width: 100%;
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .navbar {
+    position: relative;
+    z-index: 10;
+
+    &__burger {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 20px;
+      height: 80%;
+
+      row-gap: 5px;
+
+      span {
+        width: 100%;
+        height: 2px;
+
+        background-color: #fff;
+        border-radius: 6px;
+
+        transition: 0.3s ease;
+      }
+
+      span:nth-child(2) {
+        transform: translateX(3px);
+      }
+
+      &--active {
+        span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        span:nth-child(2) {
+          opacity: 0;
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
+        }
+      }
+    }
+
+    &__links {
+      position: absolute;
+      top: -1000px;
+      right: 0;
+
+      width: 100%;
+      flex-direction: column;
+
+      padding: 20px 0;
+
+      background-color: #5c62ec;
+      border-bottom: 1px solid #eee;
+
+      overflow-y: auto;
+
+      &--active {
+        top: 101%;
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.portfolio,
+.project1,
+.project2 {
+  &__img {
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+}
+
+.fullscreen-my-img {
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    object-position: center;
+  }
+}

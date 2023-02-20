@@ -1,0 +1,47 @@
+.button {
+  position: relative;
+
+  padding: 15px 20px;
+  background-color: #5c62ec;
+
+  border: 1px solid #fff;
+  border-radius: 6px;
+
+  font-size: clamp(10px, 2vw, 14px);
+  font-weight: 600;
+
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 30%;
+    right: 30%;
+    bottom: 0;
+
+    background-color: #171718;
+    border-radius: 50%;
+
+    z-index: -1;
+
+    scale: 0;
+    transition: scale 0.3s ease;
+  }
+
+  &:hover::before {
+    scale: 3;
+  }
+
+  i {
+    vertical-align: auto;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .button {
+    padding: 10px 14px;
+  }
+}

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Box-Icons-->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!--AOS-Animate-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Портфолио</title>
+  </head>
+  <body>
+    <div class="body__wrapper">
+      <header class="header" id="main">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar__menu">
+              <div class="navbar__logo">Портфолио</div>
+
+              <ul class="navbar__links">
+                <li>
+                  <a href="#main" class="navbar__link navbar__link--active"
+                    >Главная</a
+                  >
+                </li>
+                <li><a href="#about" class="navbar__link">Обо мне</a></li>
+                <li><a href="#projects" class="navbar__link">Проекты</a></li>
+                <li><a href="#contact" class="navbar__link">Связаться</a></li>
+              </ul>
+
+              <div class="navbar__burger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="header__inner" data-aos="fade-down">
+          <h1 class="header__title">
+            <span class="hi">&#128075;</span> Я
+            <span class="header__title-name">Галымбек Диас</span>
+            <br />
+            <span class="header__title-profession">Frontend программист</span>
+          </h1>
+          <p class="header__text">Мое резюме</p>
+          <div class="header__buttons">
+            <button class="button" id="portfolio">
+              <i class="bx bx-show"></i> Посмотреть
+            </button>
+            <a
+              href="https://drive.google.com/uc?export=download&id=1OA9RQjw7-_LnfgJPh92cBBX9jskJTQnG"
+              class="button"
+            >
+              <i class="bx bxs-download"></i> Скачать
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <section class="about" data-aos="zoom-in" id="about">
+        <div class="about__inner col">
+          <div class="about__img-box">
+            <img class="about__img" src="images/me.jpeg" alt="me" />
+          </div>
+
+          <div class="about__content-box">
+            <h2 class="about__title">Обо мне</h2>
+            <p class="about__text">
+              Начал путь в IT-сферу в 2020году. Самым первым языком стал C#,
+              данный язык мне не понравилься, дальше я изучил php и еще освойл
+              Laravel.
+            </p>
+
+            <p class="about__text">
+              Со временем интересовался визуальной частью сайта и рещил изучить
+              Front-end и таким образом полностью перешел на фронт. Сейчас
+              изучаю данный стек, мне очень нравится анимировать, оживить сайт.
+            </p>
+
+            <a class="about__btn button" href="pages/about.html">
+              Больше <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2 class="projects__title">Проекты</h2>
+
+          <div class="row projects__box">
+            <div
+              class="projects__card restaurant main-project"
+              data-aos="fade-right"
+            >
+              <div class="projects__card-header">
+                <h3 class="projects__card-caption">Суши ресторан</h3>
+              </div>
+              <div class="projects__card-body">
+                <div class="projects__card-widget">Главная</div>
+                <img
+                  class="projects__card-img"
+                  src="images/projects/restaurant-mini.jpg"
+                  alt=""
+                />
+
+                <button class="button">
+                  <i class="bx bx-show"></i> Посмотреть
+                </button>
+              </div>
+            </div>
+
+            <div class="projects__card school" data-aos="fade-right">
+              <div class="projects__card-header">
+                <h3 class="projects__card-caption">Школа испанского языка</h3>
+              </div>
+              <div class="projects__card-body">
+                <div class="projects__card-widget">Главная</div>
+                <img
+                  class="projects__card-img"
+                  src="images/projects/school-mini.jpg"
+                  alt=""
+                />
+
+                <button class="button">
+                  <i class="bx bx-show"></i> Посмотреть
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="contact__title">Связаться</h2>
+          <div class="contact__inner row">
+            <a class="contact__link" href="tel:87070154181"
+              ><i class="contact__link-icon bx bxs-phone"></i>8-707-015-41-81</a
+            >
+            <a
+              class="contact__link"
+              href="https://hh.kz/resume/7b890022ff0bab1ef50039ed1f5748486f7a78"
+              target="_blank"
+              ><i class="contact__link-icon bx bxs-briefcase-alt-2"></i>hh.kz</a
+            >
+            <a class="contact__link copy" role="button" id="gmail"
+              ><i class="contact__link-icon bx bxl-gmail"></i
+              >diasgalymbek47@gmail.com</a
+            >
+            <a
+              class="contact__link"
+              href="https://github.com/diasgalymbek47"
+              target="_blank"
+              ><i class="contact__link-icon bx bxl-github"></i>Github</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__body col">
+            <div class="footer__title">Galymbek Dias</div>
+            <div class="footer__socials">
+              <h4 class="footer__socials-caption">Социальные сети</h4>
+              <ul class="socials col">
+                <li>
+                  <a
+                    href="https://www.instagram.com/dias.galymbek?r=nametag"
+                    target="_blank"
+                    ><i class="bx bxl-instagram-alt"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://m.vk.com/ne_proger" target="_blank"
+                    ><i class="bx bxl-vk"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__down">© 2023 Galymbek Dias</div>
+        </div>
+      </footer>
+    </div>
+
+    <!--Scroll-UP-->
+    <div class="up">
+      <i class="bx bx-chevrons-up"></i>
+    </div>
+
+    <!--Modals-->
+    <!--1-->
+    <div class="modal portfolio">
+      <div class="modal__wrap">
+        <i class="bx bx-x modal__close"></i>
+
+        <img class="portfolio__img" src="images/rezume.png" alt="" />
+      </div>
+    </div>
+
+    <!--2-->
+    <div class="modal fullscreen-my-img">
+      <div class="modal__wrap">
+        <i class="bx bx-x modal__close"></i>
+
+        <div class="fullscreen-my-img__box">
+          <img class="fullscreen-my-img__img" src="images/me.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!--3-->
+    <div class="modal project1">
+      <div class="modal__wrap">
+        <i class="bx bx-x modal__close"></i>
+
+        <img
+          class="project1__img"
+          src="images/projects/restaurant-full.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <!--4-->
+    <div class="modal project2">
+      <div class="modal__wrap">
+        <i class="bx bx-x modal__close"></i>
+
+        <img
+          class="project2__img"
+          src="images/projects/school-full.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

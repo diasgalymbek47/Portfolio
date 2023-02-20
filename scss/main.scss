@@ -1,0 +1,310 @@
+@import "components/base";
+@import "components/navbar";
+@import "components/button";
+@import "components/modal";
+@import "components/modals";
+@import "components/footer";
+
+.header {
+  border-bottom: 1px solid #a0a0a1;
+  margin-bottom: 100px;
+
+  &__inner {
+    width: max-content;
+    margin: 0 auto;
+    padding: 180px 0;
+
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    font-size: clamp(22px, 3vw, 38px);
+    line-height: 58px;
+    cursor: default;
+
+    &:hover {
+      .hi {
+        display: inline-block;
+
+        animation: hello 0.5s infinite linear;
+      }
+
+      @keyframes hello {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        50% {
+          transform: rotate(25deg);
+        }
+
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  &__title-name {
+    color: #5c62ec;
+  }
+
+  &__title-profession {
+    text-decoration: underline;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    font-size: clamp(14px, 3vw, 22px);
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+.about {
+  padding: 0 0 150px;
+
+  &__inner {
+    max-width: 980px;
+    margin: 0 auto;
+
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: #1c1e22;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &__img-box {
+    max-width: 300px;
+    height: 300px;
+
+    margin: 0 auto;
+
+    flex: 0 0 auto;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+    border-radius: 10px;
+
+    transition: scale 0.2s ease;
+    &:hover {
+      scale: 1.05;
+    }
+
+    cursor: pointer;
+  }
+
+  &__content-box {
+    padding: 10px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    i {
+      vertical-align: bottom;
+      margin-left: 10px;
+
+      transform: translateY(-1px);
+    }
+  }
+}
+
+.projects {
+  margin-bottom: 150px;
+
+  &__title {
+    margin-bottom: 50px;
+  }
+
+  &__box {
+    max-width: 980px;
+    margin: 0 auto;
+    row-gap: 80px;
+  }
+
+  &__card {
+    &.main-project {
+      .projects__card-widget {
+        display: block;
+      }
+    }
+  }
+
+  &__card-header {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+  }
+
+  &__card-caption {
+    font-size: 21px;
+    margin-bottom: 5px;
+  }
+
+  &__card-body {
+    position: relative;
+    width: 100%;
+
+    padding: 10px;
+
+    background-color: #fff;
+    border-radius: 5px;
+  }
+
+  &__card-widget {
+    display: none;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    padding: 5px;
+
+    font-size: clamp(8px, 2vw, 14px);
+    font-weight: 500;
+
+    background-color: #5c62ec;
+    border-radius: 5px 0;
+  }
+
+  &__card-img {
+    width: 80%;
+    height: 400px;
+
+    margin: 20px auto 50px;
+
+    border: 1px dashed #000;
+
+    object-fit: contain;
+
+    cursor: pointer;
+
+    transition: scale 0.3s ease;
+    &:hover {
+      scale: 1.03;
+    }
+  }
+}
+
+.contact {
+  margin-bottom: 100px;
+
+  &__title {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    padding: 20px;
+
+    background-color: #f8f8f8;
+    border-radius: 5px;
+  }
+
+  &__link {
+    padding: 3px;
+
+    color: #1c1e22;
+
+    position: relative;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: #eee;
+    }
+
+    &--copy::before {
+      content: "Скопирован";
+      margin-left: 20px;
+      padding: 5px 10px;
+
+      position: absolute;
+      right: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      font-size: clamp(4px, 2vw, 16px);
+
+      background-color: #1c1e22;
+      color: #fff;
+
+      opacity: 0;
+
+      animation: show 2s linear;
+    }
+  }
+
+  &__link-icon {
+    margin-right: 10px;
+    color: #1c1e22;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about {
+    margin: 0 10px;
+
+    &__img-box {
+      max-width: 80%;
+    }
+  }
+
+  .projects {
+    &__card-img {
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .header {
+    &__title {
+      line-height: 38px;
+    }
+  }
+}
